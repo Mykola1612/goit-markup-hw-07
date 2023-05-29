@@ -768,14 +768,19 @@ img {
   fill: transparent;
 }
 
+.visually-hidden:focus-visible ~ .label-checkbox-stylization .check-mark {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 .visually-hidden:checked ~ .label-checkbox-stylization .check-mark {
-  background-color: var(--Pressed-state-color);
+  background-color: var(--buton-text-color);
 
   background-origin: border-box;
   border: none;
   fill: var(--hero-text-color);
   border-color: var(--Pressed-state-color);
 }
+
 .checkbox-link {
   font-weight: 400;
   font-size: 12px;
