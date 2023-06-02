@@ -8,6 +8,16 @@
 }
 
 /* скидання стилів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 img {
   display: block;
 }
@@ -303,6 +313,9 @@ body {
 
     letter-spacing: 0.04em;
   }
+  .tablet-margin-address {
+    margin-bottom: 12px;
+  }
 }
 @media screen and (min-width: 1158px) {
   /* logo */
@@ -330,7 +343,7 @@ body {
 }
 
 /* Main */
-
+/* section hero */
 .hero {
   margin-left: auto;
   margin-right: auto;
@@ -347,19 +360,6 @@ body {
   text-transform: capitalize;
 
   color: var(--hero-text-color);
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    margin-bottom: 36px;
-    max-width: 496px;
-    font-size: 56px;
-    line-height: 1.07;
-  }
-}
-@media screen and (min-width: 1158px) {
-  .hero {
-    margin-bottom: 48px;
-  }
 }
 .section-hero {
   margin-right: auto;
@@ -380,12 +380,6 @@ body {
     ),
     url(../images/Background-img-hero/background-mobile.jpg);
 }
-@media screen and (min-width: 1158px) {
-  .section-hero {
-    padding: 188px 0 188px 0;
-  }
-}
-
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 428px),
   screen and (min-resolution: 192dpi) and (max-width: 428px),
   screen and (min-resolution: 2dppx) and (max-width: 428px) {
@@ -395,6 +389,14 @@ body {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/Background-img-hero/background-mobile@2.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-bottom: 36px;
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
   }
 }
 @media screen and (min-width: 429px) {
@@ -420,6 +422,16 @@ body {
       url(../images/Background-img-hero/background-tablet@2.jpg);
   }
 }
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    margin-bottom: 48px;
+  }
+  .section-hero {
+    padding: 188px 0 188px 0;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .section-hero {
     max-height: 600px;
@@ -472,131 +484,97 @@ body {
   background-color: var(--Pressed-state-color);
 }
 
-/* 
-.section-hero {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 188px 0 188px 0;
-
-  max-height: 600px;
-  max-width: 1440px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  background-color: var(--pitel-text-color);
-
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office.jpg);
-}
-
-.hero {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 48px;
-  max-width: 496px;
-
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-
-  color: var(--hero-text-color);
-}
-.buttons {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 32px;
-
-  min-width: 169px;
-  height: 56px;
-  border: none;
-  font-family: 'Roboto', sans-serif;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-
-  color: var(--hero-text-color);
-  background-color: var(--buton-text-color);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.buttons:hover,
-.buttons:focus {
-  background-color: var(--Pressed-state-color);
-}
- */
-
 /* section company */
-
-.action {
-  padding-bottom: 120px;
+@media screen and (max-width: 1157px) {
+  .section-company-container {
+    display: none;
+  }
 }
-
+@media screen and (max-width: 767px) {
+  .company-li {
+    margin-bottom: 72px;
+  }
+}
 .company {
-  padding: 120px 0 120px 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
-
-.section-company-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 264px;
-  height: 112px;
-  margin-bottom: 8px;
-  border-radius: 4px;
-
-  background-color: var(--main-color-svg);
-}
-
-.company-list {
-  display: flex;
-  justify-content: space-between;
-
-  gap: 24px;
-}
-
-.company-li {
-  width: 264px;
-}
-
 .titel-company {
-  margin-top: 0;
   margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 
   color: var(--pitel-text-color);
 }
-
 .text-company {
-  margin: 0;
-
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
 }
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .company-list {
+    flex-wrap: wrap;
+    row-gap: 72px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .company-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+  .company-li {
+    width: 356px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .company {
+    padding: 120px 0 120px 0;
+  }
+  .section-company-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-/* section-action */
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    border-radius: 4px;
 
+    background-color: var(--main-color-svg);
+  }
+  .company-li {
+    width: 264px;
+  }
+  .titel-company {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .text-company {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+/* section action */
+@media screen and (max-width: 1157px) {
+  .action {
+    display: none;
+  }
+}
+
+.action {
+  padding-bottom: 120px;
+}
 .action-list {
   display: flex;
   justify-content: space-between;
@@ -622,16 +600,13 @@ body {
 }
 
 /* Teams */
-
 .section-teams {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 
   background-color: var(--main-color-svg);
 }
-
 .teams-title {
-  margin-top: 0;
   margin-bottom: 72px;
 
   font-weight: 700;
@@ -643,26 +618,21 @@ body {
 
   color: var(--pitel-text-color);
 }
-
-.teams-ul {
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
-}
-
-.teams-h-and-p {
-  padding: 32px 0;
-}
-
 .teams-list {
+  margin-bottom: 72px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 264px;
   background-color: var(--hero-text-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0 0 4px 4px;
 }
+.teams-h-and-p {
+  padding: 32px 0;
+}
 .teams-list-title {
   text-align: center;
-  margin: 0;
   margin-bottom: 8px;
 
   font-weight: 500;
@@ -672,9 +642,7 @@ body {
 
   color: var(--pitel-text-color);
 }
-
 .teams-text {
-  margin: 0;
   margin-bottom: 8px;
   text-align: center;
 
@@ -713,14 +681,34 @@ body {
 .section-teams-a:focus {
   background-color: var(--Pressed-state-color);
 }
+@media screen and (max-width: 1157px) {
+  .teams-ul {
+    row-gap: 64px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .teams-list {
+    margin: 0;
+  }
+  .teams-ul {
+    display: flex;
+    column-gap: 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .teams-ul {
+    justify-content: space-between;
+  }
+}
 
 /* Customers */
 .section-customers {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .customers {
-  margin: 0;
   margin-bottom: 72px;
 
   font-weight: 700;
@@ -734,11 +722,15 @@ body {
 }
 .customers-conteiner {
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 72px;
 }
 .customers-clients-list {
-  width: 168px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
   height: 88px;
 }
 .customers-client {
@@ -762,9 +754,29 @@ body {
 .customers-client-svg {
   fill: currentColor;
 }
+@media screen and (min-width: 768px) {
+  .customers-conteiner {
+    column-gap: 24px;
+    justify-content: center;
+  }
+  .customers-clients-list {
+    margin: 0;
+    width: 168px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .section-customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .customers-conteiner {
+    flex-wrap: nowrap;
+    row-gap: 0;
+  }
+}
 
 /* Footer */
-.footer {
+/* .footer {
   display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -939,7 +951,7 @@ body {
 }
 .button-footer-form-svg {
   margin-left: 16px;
-}
+} */
 /* Backdrop */
 .backdrop {
   position: fixed;
