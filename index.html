@@ -26,11 +26,23 @@
       <div class="container main-nav">
         <nav class="main-nav">
           <!-- logo -->
-          <a href="./index.html" class="logo link">
-            Web <span class="span-logo">Studio</span></a
-          >
+          <div class="logo-and-button-burger">
+            <a href="./index.html" class="logo link">
+              Web<span class="span-logo">Studio</span></a
+            >
+            <button
+              type="button"
+              class="button-nav-burger js-open-menu"
+              aria-expanded="false"
+            >
+              <svg width="32" height="22">
+                <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+              </svg>
+            </button>
+          </div>
 
           <!-- navigation list -->
+
           <ul class="site-nav list">
             <li class="item">
               <a
@@ -53,7 +65,7 @@
         <!-- address -->
         <address class="address">
           <ul class="address-list list">
-            <li class="item">
+            <li class="item tablet-margin-li">
               <a
                 href="mailto:info@devstudio.com"
                 class="address-link list link"
@@ -68,12 +80,89 @@
             </li>
           </ul>
         </address>
+        <!-- Mobile-menu -->
+        <div class="mobile-menu js-menu-container">
+          <div class="container mobile-menu-container">
+            <button type="button" class="close-mobile-menu js-close-menu">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="nav-mobile">
+              <nav class="nav-list">
+                <ul class="list">
+                  <li class="mobile-menu-list-nav">
+                    <a href="./index.html" class="navigation-link curent link">
+                      Studio</a
+                    >
+                  </li>
+                  <li class="mobile-menu-list-nav">
+                    <a href="./portfolio.html" class="navigation-link link"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li class="mobile-menu-list-nav">
+                    <a href="" class="navigation-link link"> Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+              <address class="address-mobile">
+                <ul class="address-list list">
+                  <li class="styles-tel-mobile">
+                    <a href="tel:+110001111111" class="address-link list link"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="mailto:info@devstudio.com"
+                      class="address-mobile-gmail list link"
+                    >
+                      info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <!-- mobile menu svg -->
+              <ul class="list mobile-modal-svg-ul">
+                <li class="section-teams-list">
+                  <a href="" class="styles-bg-svg">
+                    <svg width="24" height="24" class="primary-fill-svg">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section-teams-list">
+                  <a href="" class="styles-bg-svg">
+                    <svg width="24" height="24" class="primary-fill-svg">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section-teams-list">
+                  <a href="" class="styles-bg-svg">
+                    <svg width="24" height="24" class="primary-fill-svg">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="section-teams-list">
+                  <a href="" class="styles-bg-svg">
+                    <svg width="24" height="24" class="primary-fill-svg">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Main -->
     <main>
-      <!-- section hero -->
-      <section class="section-hero">
+    <!-- section hero -->
+     <section class="section-hero">
         <div class="container">
           <h1 class="hero">Effective Solutions for Your Business</h1>
           <button type="button" class="buttons" data-modal-open>
@@ -81,14 +170,14 @@
           </button>
         </div>
       </section>
-      <!-- section company -->
-      <section class="company">
+    <!-- section company -->
+    <!-- <section class="company">
         <div class="container">
           <h2 hidden class="company-hero">Company description</h2>
           <ul class="company-list list">
             <li class="company-li company-li-1">
               <div class="section-company-container">
-                <svg width="64" height="64">
+                <svg width="64" height="64" class="company-svg">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -100,7 +189,7 @@
             </li>
             <li class="company-li company-li-2">
               <div class="section-company-container">
-                <svg width="64" height="64">
+                <svg width="64" height="64" class="company-svg">
                   <use href="./images/icons.svg#icon-vector-cloc"></use>
                 </svg>
               </div>
@@ -112,7 +201,7 @@
             </li>
             <li class="company-li company-li-3">
               <div class="section-company-container">
-                <svg width="64" height="64">
+                <svg width="64" height="64" class="company-svg">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -124,7 +213,7 @@
             </li>
             <li class="company-li company-li-4">
               <div class="section-company-container">
-                <svg width="64" height="64">
+                <svg width="64" height="64" class="company-svg">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -136,9 +225,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- section photo -->
-      <section class="action">
+      </section> -->
+    <!-- section photo -->
+    <!-- <section class="action">
         <div class="container">
           <h2 class="action-title">What are we doing</h2>
           <ul class="action-list list">
@@ -157,9 +246,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- section teams -->
-      <section class="section-teams">
+      </section> -->
+    <!-- section teams -->
+    <!-- <section class="section-teams">
         <div class="container">
           <h2 class="teams-title">Our Team</h2>
           <ul class="teams-ul list">
@@ -313,9 +402,9 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- Customers -->
-      <section class="section-customers">
+      </section> -->
+    <!-- Customers -->
+    <!-- <section class="section-customers">
         <div class="container">
           <h2 class="customers">Customers</h2>
 
@@ -365,9 +454,9 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
     <!-- Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container container-footer">
         <div class="container-footer-logo-and-text">
           <a href="./index.html" class="logo-footer link footer-width">
@@ -434,10 +523,10 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- modal -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="button-modal" data-modal-close>
           <svg width="8" height="8" class="modal-close">
@@ -531,6 +620,7 @@
         </form>
       </div>
     </div>
-    <script src="./JS/modal.js"></script>
+    <script src="./JS/modal.js"></script> -->
+    <script src="./JS/mobile-menu.js"></script>
   </body>
 </html>
