@@ -66,24 +66,22 @@ body {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 428px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 428px) {
-  .container {
-    width: 428px;
-  }
-}
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1140px;
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /* Головна сторінка index.html */
@@ -119,6 +117,7 @@ body {
     overflow: auto;
     left: 0;
     top: 0;
+    z-index: 999;
 
     visibility: hidden;
     pointer-events: none;
@@ -754,59 +753,33 @@ body {
 .customers-client-svg {
   fill: currentColor;
 }
-@media screen and (min-width: 768px) {
-  .customers-conteiner {
-    column-gap: 24px;
-    justify-content: center;
-  }
-  .customers-clients-list {
-    margin: 0;
-    width: 168px;
-  }
-}
-@media screen and (min-width: 1158px) {
-  .section-customers {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-  .customers-conteiner {
-    flex-wrap: nowrap;
-    row-gap: 0;
-  }
-}
 
 /* Footer */
-/* .footer {
-  display: flex;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  min-height: 312px;
+.footer {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  min-height: 664px;
 
   background-color: var(--pitel-text-color);
 }
-.container-footer {
-  display: flex;
-  align-items: baseline;
-}
 
 .container-footer-logo-and-text {
-  margin-right: 120px;
+  width: 268px;
 }
 
-.footer-width {
-  width: 264px;
-}
-
+/* logo */
 .logo-footer {
-  display: inline-block;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   margin-bottom: 16px;
 
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  align-items: center;
   letter-spacing: 0.03em;
+
   text-transform: uppercase;
 
   color: var(--buton-text-color);
@@ -826,9 +799,11 @@ body {
   color: var(--hero-text-color);
 }
 
-.footer-text {
-  margin: 0;
+/* text */
 
+.footer-text {
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -836,9 +811,20 @@ body {
 
   color: var(--main-color-svg);
 }
+/* social */
+@media screen and (max-width: 767px) {
+  .container-footer-social {
+    margin-bottom: 72px;
+  }
+  .p-footer {
+    text-align: center;
+  }
+  .footer-social-div-link {
+    justify-content: center;
+  }
+}
 
 .p-footer {
-  margin: 0;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -847,16 +833,9 @@ body {
 
   color: var(--hero-text-color);
 }
-
-.container-footer-social {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin-right: 80px;
-}
 .footer-social-div-link {
   display: flex;
-  gap: 16px;
+  column-gap: 16px;
 }
 .footer-social-li {
   display: flex;
@@ -885,6 +864,53 @@ body {
 .footer-social-svg {
   fill: var(--main-color-svg);
 }
+/* form */
+@media screen and (max-width: 767px) {
+  .form-titel {
+    text-align: center;
+  }
+  .button-submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form-titel {
+  margin-bottom: 16px;
+  color: var(--hero-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.input-form-footer {
+  background-color: transparent;
+  padding-left: 16px;
+
+  height: 40px;
+  width: 100%;
+  border: 1px solid var(--hero-text-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--hero-text-color);
+}
+.input-form-footer::placeholder {
+  color: var(--hero-text-color);
+}
+.footer-label {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--hero-text-color);
+}
+
+/* button submit */
 .button-submit {
   display: flex;
   align-items: center;
@@ -909,51 +935,84 @@ body {
 .button-submit:focus {
   background-color: var(--Pressed-state-color);
 }
-
-.form-titel {
-  margin: 0;
-  margin-bottom: 16px;
-  color: var(--hero-text-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.form {
-  display: flex;
-}
-.input-form-footer {
-  background-color: transparent;
-  padding-left: 16px;
-
-  height: 40px;
-  min-width: 264px;
-  border: 1px solid var(--hero-text-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  color: var(--hero-text-color);
-}
-.input-form-footer::placeholder {
-  color: var(--hero-text-color);
-}
-.footer-label {
-  margin-right: 24px;
-  font-weight: 400;
-  font-size: 12px;
-
-  display: flex;
-  align-items: center;
-
-  color: var(--hero-text-color);
-}
 .button-footer-form-svg {
   margin-left: 16px;
-} */
+}
+@media screen and (max-width: 767px) {
+  .container-footer-logo-and-text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    min-height: 456px;
+  }
+  .footer-label {
+    margin-bottom: 0;
+  }
+  .customers-conteiner {
+    column-gap: 24px;
+    justify-content: center;
+  }
+  .customers-clients-list {
+    margin: 0;
+    width: 168px;
+  }
+  .input-form-footer {
+    width: 264px;
+  }
+  .footer-label {
+    margin-right: 24px;
+  }
+  .form {
+    display: flex;
+  }
+  .flex-tablet {
+    display: flex;
+  }
+  .container-footer-logo-and-text {
+    width: 264px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .customers-conteiner {
+    flex-wrap: nowrap;
+    row-gap: 0;
+  }
+  .container-footer {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 312px;
+  }
+  .container-footer-logo-and-text {
+    margin-right: 120px;
+  }
+  .flex-tablet {
+    margin-right: 80px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .container-footer {
+    margin-left: 94px;
+  }
+  .flex-tablet {
+    margin-bottom: 72px;
+    column-gap: 24px;
+  }
+}
 /* Backdrop */
-.backdrop {
+/* .backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -1197,7 +1256,7 @@ body {
 .button-modal-form:focus,
 .button-modal-form:hover {
   background-color: var(--Pressed-state-color);
-}
+} */
 
 /* portfolio.html */
 
